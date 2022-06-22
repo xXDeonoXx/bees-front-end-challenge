@@ -29,20 +29,22 @@ const BreweryCard: React.FC<BreweryCardProps> = ({
     brewery.street || brewery.address_2 || brewery.address_3 || undefined;
   return (
     <Container>
-      <DeleteButtonWrapper
-        onClick={() => {
-          removeBrewery(brewery.id);
-        }}
-      >
-        <TrashIcon />
-      </DeleteButtonWrapper>
-      <BreweryTitle>{brewery.name}</BreweryTitle>
-      <BreweryAddress>
-        {typeof address == 'string' ? address : ''}
-        {brewery.state &&
-          `${typeof address == 'string' ? ', ' : ''} ${brewery.state}`}
-        {brewery.country && ` - ${brewery.country}`}
-      </BreweryAddress>
+      <div>
+        <DeleteButtonWrapper
+          onClick={() => {
+            removeBrewery(brewery.id);
+          }}
+        >
+          <TrashIcon />
+        </DeleteButtonWrapper>
+        <BreweryTitle>{brewery.name}</BreweryTitle>
+        <BreweryAddress>
+          {typeof address == 'string' ? address : ''}
+          {brewery.state &&
+            `${typeof address == 'string' ? ', ' : ''} ${brewery.state}`}
+          {brewery.country && ` - ${brewery.country}`}
+        </BreweryAddress>
+      </div>
       <ChipsContainer>
         <CardChip label={brewery.brewery_type} icon={<ChartSquareBarIcon />} />
         <CardChip label={brewery.postal_code} icon={<LocationMarkerIcon />} />

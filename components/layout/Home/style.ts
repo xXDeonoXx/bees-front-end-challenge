@@ -10,6 +10,14 @@ export const Container = styled.main`
 `;
 
 export const LogoContainer = styled.div`
+  pointer-events: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+  }
   position: absolute;
   left: 32px;
   bottom: 16px;

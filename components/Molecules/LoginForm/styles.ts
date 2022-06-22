@@ -1,5 +1,11 @@
+import { Form as FormikForm } from 'formik';
 import styled from 'styled-components';
-import { Form as FormikForm, Formik } from 'formik';
+
+export const Container = styled.div`
+  @media screen and (max-width: 768px) {
+    margin-bottom: 100px;
+  }
+`;
 
 export const Text = styled.p`
   font-size: 14px;

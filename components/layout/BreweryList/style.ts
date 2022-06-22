@@ -11,8 +11,11 @@ export const Container = styled.main`
 `;
 
 export const CardsContainer = styled.div`
+  @media screen and (max-width: 768px) {
+    padding: 96px 0px;
+  }
   margin: 0px 96px;
-  padding: 96px 0px;
+  padding: 96px 24px;
   width: 100%;
   height: 100%;
   display: flex;

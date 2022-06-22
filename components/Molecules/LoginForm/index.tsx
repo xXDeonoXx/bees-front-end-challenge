@@ -7,7 +7,7 @@ import { useUser } from '../../../providers/User';
 import Button from '../../atoms/Button';
 import Checkbox from '../../atoms/Checkbox';
 import Input from '../../atoms/Input';
-import { CheckboxWrapper, Form, InputWrapper, Text } from './styles';
+import { CheckboxWrapper, Container, Form, InputWrapper, Text } from './styles';
 
 const LoginForm = () => {
   const router = useRouter();
@@ -22,7 +22,7 @@ const LoginForm = () => {
       ),
   });
   return (
-    <div>
+    <Container>
       <Text>Please, enter your full name below</Text>
       <Text style={{ paddingTop: '16px' }}>
         Only alphabetical characters are accepted
@@ -54,7 +54,7 @@ const LoginForm = () => {
           </Form>
         )}
       </Formik>
-    </div>
+    </Container>
   );
 };
 
