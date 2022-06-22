@@ -10,9 +10,9 @@ const Header = () => {
     <Container>
       <div>
         <GoBackButton />
-        <span style={{ marginLeft: '20px' }}>Go back</span>
+        <span>Go back</span>
       </div>
-      <span style={{ marginRight: '40px' }}>{user?.name}</span>
+      <span>{user?.name}</span>
     </Container>
   );
 };

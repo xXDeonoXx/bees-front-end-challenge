@@ -8,17 +8,44 @@ export const Container = styled.main`
   align-items: center;
   justify-content: space-between;
 
-  > div {
+  > div:first-of-type {
     display: flex;
-    margin-left: 20px;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 10px;
+      > span {
+        margin-left: 10px;
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+      margin-left: 20px;
+      > span {
+        margin-left: 20px;
+      }
+    }
   }
 
   span {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 150%;
+  }
+
+  @media screen and (max-width: 768px) {
+    span {
+      font-size: 18px;
+      line-height: 150%;
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    span {
+      font-size: 30px;
+      line-height: 150%;
+      margin-right: 40px;
+    }
   }
 `;
