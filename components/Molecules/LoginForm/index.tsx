@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import { useRouter } from 'next/router';
 import * as Yup from 'yup';
+import { useUser } from '../../../providers/User';
 // import { useUser } from '../../../providers/User';
 
 import Button from '../../atoms/Button';
@@ -10,6 +11,7 @@ import { CheckboxWrapper, Form, InputWrapper, Text } from './styles';
 
 const LoginForm = () => {
   const router = useRouter();
+  const { setName } = useUser();
 
   const FormSchema = Yup.object().shape({
     name: Yup.string()
@@ -30,6 +32,7 @@ const LoginForm = () => {
         validationSchema={FormSchema}
         initialValues={{ name: '', isAdult: false }}
         onSubmit={({ name }) => {
+          setName(name);
           router.push('brewery-list');
         }}
       >
