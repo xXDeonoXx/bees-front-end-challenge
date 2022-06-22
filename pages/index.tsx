@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Container, LogoContainer } from '../components/Home/style';
+import { Container, LogoContainer } from '../components/layout/Home/style';
 
 import LoginForm from '../components/Molecules/LoginForm';
 
