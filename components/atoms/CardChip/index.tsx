@@ -11,7 +11,6 @@ interface CardChipProps {
 const CardChip: React.FC<CardChipProps> = ({ label, icon, editable }) => {
   const [labelState, setLabelState] = useState('');
   const [editing, setEditing] = useState(false);
-  const [edited, setEdited] = useState(false);
 
   const handleEditLabel = (value: string) => {
     setLabelState(value);
@@ -21,9 +20,6 @@ const CardChip: React.FC<CardChipProps> = ({ label, icon, editable }) => {
   if (!label) return <></>;
   return (
     <Container
-      // className={`bg-primary rounded-xl flex px-2 py-1 min-w-[8rem] items-center ${
-      //   editable && 'cursor-pointer'
-      // }`}
       onClick={() => {
         editable && setEditing(true);
       }}
