@@ -9,3 +9,14 @@ export const Container = styled.main`
   flex-direction: column;
   align-items: center;
 `;
+
+export const CardsContainer = styled.div`
+  margin: 0px 96px;
+  padding: 96px 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+`;

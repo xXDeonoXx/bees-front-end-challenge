@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
-import { Container } from '../components/layout/BreweryList/style';
+import {
+  CardsContainer,
+  Container,
+} from '../components/layout/BreweryList/style';
 import Header from '../components/Molecules/Header';
 import BreweryCard from '../components/Organisms/BreweryCard';
 import { getApi } from '../services/api';
@@ -12,10 +15,24 @@ interface BreweryListPageProps {
 
 const BreweryListPage: NextPage<BreweryListPageProps> = ({ breweries }) => {
   const [breweriesState, setBreweriesState] = useState(breweries);
-
   return (
     <Container>
       <Header />
+      <CardsContainer>
+        {breweriesState?.map((brewery) => {
+          return (
+            <BreweryCard
+              key={brewery.id}
+              brewery={brewery}
+              removeBrewery={(id: string) => {
+                setBreweriesState(
+                  breweriesState.filter((brew) => brew.id != id)
+                );
+              }}
+            />
+          );
+        })}
+      </CardsContainer>
     </Container>
   );
 };
