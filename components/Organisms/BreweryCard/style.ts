@@ -38,6 +38,14 @@ export const DeleteButtonWrapper = styled.div`
   cursor: pointer;
 `;
 
+export const WebsiteButtonWrapper = styled.div`
+  width: 20px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  cursor: pointer;
+`;
+
 export const BreweryTitle = styled.span`
   font-weight: 700;
   font-size: 20px;

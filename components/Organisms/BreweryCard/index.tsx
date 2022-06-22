@@ -5,7 +5,8 @@ import {
   PlusCircleIcon,
 } from '@heroicons/react/outline';
 
-import { TrashIcon } from '@heroicons/react/solid';
+import { TrashIcon, GlobeAltIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 import { Brewery } from '../../../services/breweries/breweries.interface';
 import CardChip from '../../atoms/CardChip';
 import {
@@ -14,6 +15,7 @@ import {
   ChipsContainer,
   Container,
   DeleteButtonWrapper,
+  WebsiteButtonWrapper,
 } from './style';
 
 interface BreweryCardProps {
@@ -37,6 +39,13 @@ const BreweryCard: React.FC<BreweryCardProps> = ({
         >
           <TrashIcon />
         </DeleteButtonWrapper>
+        {brewery.website_url && (
+          <WebsiteButtonWrapper>
+            <a href={brewery.website_url} rel='noreferrer' target={'_blank'}>
+              <GlobeAltIcon />
+            </a>
+          </WebsiteButtonWrapper>
+        )}
         <BreweryTitle>{brewery.name}</BreweryTitle>
         <BreweryAddress>
           {typeof address == 'string' ? address : ''}
