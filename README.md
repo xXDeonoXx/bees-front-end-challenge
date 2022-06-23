@@ -1,8 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BEES - Frontend Challenge - Brewery Website
 
-## Getting Started
+## How to run
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,25 +18,31 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Features
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- It contains all of the must have requirements.
+- Built with Typescript and correct Typings.
+- Global state management for the User information (name) using Context API
+- Responsive.
+- "Add More" tag functionality to add a new value to the Brewery Cards Chips.
+- Error handling in the initial page input.
+- Input components ready to use with Formik.
+- Form field validations with Yup.
+- Components organized following the Atomic Design metodology.
+- Little hover effect when hovering a card.
+- Shows an clickable website icon on bottom-right corner of Brewery cards when an Website Url is available
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Tech
 
-## Learn More
+This project uses a number of open source projects to work properly:
 
-To learn more about Next.js, take a look at the following resources:
+- [ReactJS](https://reactjs.org) - A JavaScript library for building user interfaces
+- [NextJS](https://nextjs.org) - I picked NextJS because today there is no reason to use react without it, it gives you a lot of tools to work with things like SSR, performance and SEO.
+- [Styled Components](https://styled-components.com/) - I choose styled components because of its usefulness in componentizing and isolating styles across my React components.
+- [Formik](https://formik.org/) - Formik is my pick and use Form tool for every project i work, it is easy to use, easy to configure validation with external tools like Yup or zod and it is easy to create custom components to use his internal hooks for things like error messages, blur, submit, prevent submit and a lot more.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Final thoughts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I Really had fun working in this project, usually i work with TailwindCSS and using styled components again was a nice change in the way i create frontend, the only thing i don't have practical knowledge at the moment are tests and is the only thing i'm sad to finish the project without it, unfortunately today i don't have the free time to learn and use it in the time span of the challenge.
